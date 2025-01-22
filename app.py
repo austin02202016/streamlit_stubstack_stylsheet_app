@@ -33,6 +33,20 @@ def get_rss_feed(publication_url):
 
 def main():
     st.title("Substack Stylesheet Generator")
+
+    # Add link with custom styling (darker gray for link, black for text)
+    # Add link with custom styling (darker gray for entire text)
+    st.markdown(
+        """
+        <p style="color: #808080;">
+            read more about writer stylesheets and how to use them: 
+            <a href="https://www.flyingpenguins.io" target="_blank" style="color: inherit; text-decoration: none;">
+                here
+            </a>
+        </p>
+        """,
+        unsafe_allow_html=True
+    )
     
     # User input for Substack URL
     publication_url = st.text_input(
